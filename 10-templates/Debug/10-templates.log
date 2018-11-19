@@ -1,0 +1,57 @@
+﻿  10-templates.cpp
+c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(31): warning C4244: =: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+  c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(182): note: выполняется компиляция ссылки на экземпляр шаблон функции "T getMaxDigit<float>(T **,int,int)"
+          with
+          [
+              T=float
+          ]
+c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(39): warning C4244: =: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(61): warning C4244: =: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(69): warning C4244: =: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(98): warning C4244: return: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(31): warning C4244: =: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=double
+          ]
+  c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(187): note: выполняется компиляция ссылки на экземпляр шаблон функции "T getMaxDigit<double>(T **,int,int)"
+          with
+          [
+              T=double
+          ]
+c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(39): warning C4244: =: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=double
+          ]
+c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(61): warning C4244: =: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=double
+          ]
+c:\projects\pobochka\10-templates\10-templates\10-templates.cpp(69): warning C4244: =: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=double
+          ]
+  10-templates.vcxproj -> C:\Projects\Pobochka\10-templates\Debug\10-templates.exe
