@@ -1,68 +1,52 @@
-double NegSum(double *myarray, int count)
+#include "functions.h"
+
+void PrintArray(double* arr, const int kArraySize)
 {
-	double sum = 0;
-	for (int i = 0; i < count; i++)
-	{
-		if (myarray[i] < 0)
-		{
-			sum += myarray[i];
-		}
-	}
-	return sum;
+    cout << "[";
+    for (int i = 0; i < kArraySize; i++)
+        cout << arr[i] << ((i < kArraySize - 1) ? (", ") : ("]"));
 }
 
-double * SortArray(double *myarray, int count)
+bool NegativeElementExists(double* arr, const int kArraySize)
 {
-	double * newarray = myarray;
-	for (int i = 0; i < count; i++)
-	{
-		for (int j = 0; j < count - (i + 1); j++)
-		{
-			if (newarray[j] > newarray[j + 1])
-			{
-				double temp = newarray[j];
-				newarray[j] = newarray[j + 1];
-				newarray[j + 1] = temp;
-			}
-		}
-	}
-	return newarray;
+    for (int i = 0; i < kArraySize; i++)
+        if (arr[i] < 0)
+            return 1;
+    return 0;
 }
 
-double GetMultiple(double *myarray, int count) 
+double SumNegativeElements(double* arr, const int kArraySize)
 {
-	double minel, maxel, multiple;
-	int minindex, maxindex;
+    double sum = 0;
+    for (int i = 0; i < kArraySize; i++)
+        if (arr[i] < 0)
+            sum += arr[i];
+    return sum;
+}
 
-	multiple = 1;
+MinMaxIndices FindMinMaxIndices(double* arr, const int kArraySize)
+{
+    int min_i = 0, max_i = 0;
+    for (int i = 1; i < kArraySize; i++)
+    {
+        if ((arr[i]) > (arr[min_i])) min_i = i;
+        if ((arr[i]) < (arr[max_i])) max_i = i;
+    }
+    return MinMaxIndices{ min_i, max_i };
+}
 
-	for (int i = 0; i < count; i++)
-	{
+double ProductRangeElements(double* arr, int begin, int end)
+{
+    double product = 1;
+    for (int i = begin + 1; i < end; i++)
+        product *= arr[i];
+    return product;
+}
 
-		if (i == 0)
-		{
-			minel = myarray[i];
-			maxel = myarray[i];
-			minindex = 0;
-			maxindex = 0;
-		}
-
-		if (myarray[i] > maxel)
-		{
-			maxel = myarray[i];
-			maxindex = i;
-		}
-
-		if (myarray[i] < minel)
-		{
-			minel = myarray[i];
-			minindex = i;
-		}
-	}
-
-	for (int i = maxindex; i < minindex; i++)
-	{
-		multiple *= myarray[i];
-	}
-	return multiple;
+void SortArray(double* arr, const int kArraySize)
+{
+    for (int i = 0; i < kArraySize - 1; i++)
+        for (int j = 0; j < kArraySize - i - 1; j++)
+            if (arr[j] > arr[j + 1])
+                swap(arr[j], arr[j + 1]);
 }
